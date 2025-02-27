@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _4DB_Semaine2
 {
@@ -17,33 +13,43 @@ namespace _4DB_Semaine2
         static void Main(string[] args)
         {
             //Ex#1
+
             //using (ProgEF_Entities context = new ProgEF_Entities())
             //{
             //    List<Contact> lstContacts = context.Contacts.ToList(); //Exécution de la requête se fait ici
             //    foreach (Contact c in lstContacts)
             //        Console.WriteLine(c.FirstName + " - " + c.LastName);
+
             //    //Différence???????
+
             //    var contacts = context.Contacts;
-            //    foreach (Contact c in contacts) //Exécution de la requête se fait ici
+            //    foreach (Contact c in contacts) //Exécution de la requête se fait ici sur les entité et non les objets
             //        Console.WriteLine(c.FirstName + " - " + c.LastName );
             //}
+            //--------------------------------------------------------------------------------------------
+
 
             //CAS À NE PAS FAIRE
+
+
             //using (ProgEF_Entities context = new ProgEF_Entities())
             //{
-            //    //Cas #1 : Le double toList
+
+            //    Cas #1 : Le double toList
             //    List<Contact> lstContacts = context.Contacts
             //                                       .ToList()
             //                                       .Where(c2=>c2.LastName == "Hernandez")
             //                                       .ToList(); 
 
-            //    //Cas #2 
+            //    Cas #2 
             //    lstContacts = context.Contacts.ToList();
             //    Contact c = lstContacts.FirstOrDefault(c1 => c1.LastName == "Hernandez");
             //    Console.WriteLine(c.FirstName + " - " + c.LastName);
             //}
+            //------------------------------------------------------------------------------------------
 
             //Ex#2 - Propriété de navigation
+
             //using (ProgEF_Entities context = new ProgEF_Entities())
             //{
             //    DbSet<Contact> lstContacts = context.Contacts; //Exécution de la requête se fait ici
@@ -54,8 +60,9 @@ namespace _4DB_Semaine2
             //            Console.WriteLine(a.City);
             //    }
             //}
-
+            //--------------------------------------------------------------------------------------
             //Ex 3
+
             //ProgEF_Entities context;
             //using (context = new ProgEF_Entities())
             //{
@@ -73,8 +80,10 @@ namespace _4DB_Semaine2
             //                             .Select(c => c.FirstName + " " + c.LastName)
             //                             .ToString());
             //}
+            //------------------------------------------------------------------------------------
 
             //Ex 4 : LazyLoading Versus Eager Loading
+
             ProgEF_Entities context;
             int tempsDebut = Environment.TickCount;
             using (context = new ProgEF_Entities())
